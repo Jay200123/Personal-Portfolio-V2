@@ -8,7 +8,7 @@ export default function Footer() {
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
-                className="w-full lg:h-38 md:h-58 flex lg:flex-row md:flex-col flex-col items-center justify-between pt-10.75 pl-8 pr-8 pb-11 bg-none">
+                className="w-full lg:h-38 md:h-58 h-58 flex lg:flex-row md:flex-col flex-col items-center justify-between pt-10.75 pl-8 pr-8 pb-11 bg-none">
                 <div>
                     <img src={NavLogo} alt="Image" className="w-28 h-9.75 object-center" />
                 </div>
