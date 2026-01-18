@@ -204,27 +204,25 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
                 className="flex items-center justify-center">
-                <div className="lg:h-261 lg:w-360 md:w-3xl md:h-437 w-3xl h-436.75 border border-red-500">
+                <div className="lg:h-261 lg:w-360 md:w-3xl md:h-437 w-86.25 h-270 sm:pt-20 sm:pb-20 sm:pl-4 sm:pr-4">
 
                     <div className="flex flex-col gap-8 text-center lg:mt-28 md:mt-20 lg:mb-20 mt-20 mb-20">
-                        <h3 className="text-4xl">Services</h3>
-                        <p className="text-[13px]">End-to-end development solutions tailored to your needs.</p>
+                        <h3 className="md:text-4xl lg:text-4xl text-[21px]">Services</h3>
+                        <p className="text-[13px]">End-to-end development <br className="lg:hidden md:hidden block"/>solutions tailored to your needs.</p>
                     </div>
 
                     <div className="flex items-center justify-center md:mt-20">
-                        <div className="flex lg:flex-row md:flex-col flex-col items-center gap-6">
+                        <div className="lg:w-344 lg:h-175 md:w-176 md:h-356.25 w-85.75 h-190.75 flex lg:flex-row md:flex-col flex-col items-center gap-6">
                             {/* Service One Section */}
                             <motion.div
                                 initial={{ opacity: 0, x: -100 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1.5, ease: "easeOut" }}
-                                className="flex items-center justify-center lg:w-169 lg:h-175 md:w-176 md:h-175.25 w-176 h-175.25 bg-[#EBEBEB]">
-                                <div className="lg:w-153 lg:h-138 md:w-160 md:h-144 w-176.5 h-113.75">
-                                    <img src={ServiceOne} alt="Service" className="w-full h-full" />
-                                    <h3 className="text-[21px] lg:mt-10 md:mt-5">Fullstack-Development</h3>
+                                className="flex items-center justify-center lg:w-169 lg:h-175 md:w-176 md:h-175.25 w-85.75 h-92.5 bg-[#EBEBEB]">
+                                <div className="lg:w-153 lg:h-138 md:w-160 md:h-144 w-73.75 h-66.5">
+                                    <img src={ServiceOne} alt="Service" className="w-full h-full " />
+                                    <h3 className="lg:text-[21px] md:text-[21px] text-base lg:mt-10 md:mt-5">Fullstack-Development</h3>
                                 </div>
-
-
                             </motion.div>
 
                             {/* Service Two Section */}
@@ -232,10 +230,10 @@ export default function Portfolio() {
                                 initial={{ opacity: 0, x: 100 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1.5, ease: "easeOut" }}
-                                className="flex items-center justify-center lg:w-169 lg:h-175 md:w-176 md:h-175.25 w-176 h-175.25 bg-[#EBEBEB]">
-                                <div className="lg:w-153 lg:h-138 md:w-160 md:h-144 w-176.5 h-113.75">
-                                    <img src={ServiceTwo} alt="Service" className="w-full h-full" />
-                                    <h3 className="text-[21px] lg:mt-10 md:mt-5">Hardware & System Integration</h3>
+                                className="flex items-center justify-center lg:w-169 lg:h-175 md:w-176 md:h-175.25 w-85.75 h-92.5 bg-[#EBEBEB]">
+                                <div className="lg:w-153 lg:h-138 md:w-160 md:h-144 w-73.75 h-66.5">
+                                    <img src={ServiceTwo} alt="Service" className="w-full h-full object-cover object-center" />
+                                    <h3 className="lg:text-[21px] md:text-[21px] text-base lg:mt-10 md:mt-5">Hardware & System Integration</h3>
                                 </div>
 
                             </motion.div>
@@ -251,19 +249,20 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
                 className="flex items-center justify-center">
-                <div className="lg:h-191 lg:w-360 md:w-3xl md:h-290 flex lg:flex-row md:flex-col flex-col items-center gap-16 md:pt-8  md:pb-8  md:pr-8  md:pl-8">
+                <div className="lg:h-191 lg:w-360 md:w-3xl md:h-290 w-93.75 h-195 flex lg:flex-row md:flex-col flex-col items-center gap-16 md:pt-8  md:pb-8  md:pr-8  md:pl-8">
                     <div className="flex flex-col justify-center gap-8 w-full h-full">
-                        <h3 className="text-[37px] font-medium">
+                        <h3 className="lg:text-[37px] md:text-[37px] text-[21px] font-medium">
                             About
                         </h3>
-                        <p className="text-[17px]">I'm Renyel Jay Sioc, a full-stack developer experienced in building web applications using Node js, Express, React, Typescipt and Tailwind CSS.</p>
-                        <p className="text-[17px]">I've worked on e-commerce platforms, IT ticketing systems, and reservation systems that focus on performance, usability and clean architecture. I enjoy solving technical problems and creating solutions that are reliable, scalable and easy to use.</p>
-                        <button className=" flex items-center justify-center lg:h-13.75 lg:w-55.75 md:h-13 md:w-55.75 rounded-md pt-4 pb-4 pr-6.5 l-6.5 text-xs bg-[#5D45FD]">
+                        <p className="lg:text-[17px] md:text-[17px] text-base">I'm Renyel Jay Sioc, a full-stack developer experienced in building web applications using Node js, Express, React, Typescipt and Tailwind CSS.</p>
+                        <p className="lg:text-[17px] md:text-[17px] text-base">I've worked on e-commerce platforms, IT ticketing systems, and reservation systems that focus on performance, usability and clean architecture. I enjoy solving technical problems and creating solutions that are reliable, scalable and easy to use.</p>
+                        <button className=" flex items-center justify-center lg:h-13.75 lg:w-55.75 md:h-13 md:w-55.75 w-[222.31px] h-[54.31px] rounded-md pt-4 pb-4 pr-6.5 l-6.5 text-xs bg-[#5D45FD]">
                             <span><p className="lg:text-sm text-white">Download Resume</p></span>
                             <img src={ArrowRightUp} alt="Arrow Up" className="w-8 h-8" />
                         </button>
                     </div>
-                    <div className="flex flex-col justify-center lg:w-164 lg:h-175 md:w-176 md:h-175 w-full h-full">
+
+                    <div className="flex flex-col justify-center lg:w-164 lg:h-175 md:w-176 md:h-175 w-[357px] h-[315px]">
                         <img src={AboutImage} alt="About" className="w-full h-full object-cover object-center rounded-lg" />
                     </div>
                 </div>
@@ -275,7 +274,7 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
                 className="flex items-center justify-center">
-                <div className="flex lg:flex-col md:flex-row justify-center lg:w-360 lg:h-181 md:w-3xl md:h-120 pl-8 pr-8 pt-28 pb-28 ">
+                <div className="flex lg:flex-col md:flex-row justify-center lg:w-360 lg:h-181 md:w-3xl md:h-120 w-[375px] h-[375.31px] pl-8 pr-8 pt-28 pb-28 ">
                     <div className="relative lg:w-344 lg:h-125 md:w-176 md:h-80">
                         <img src={CTAImage} className="w-full h-full rounded-md object-cover object-center" />
                         <div className="absolute inset-0 flex flex-col items-center justify-center gap-8">
