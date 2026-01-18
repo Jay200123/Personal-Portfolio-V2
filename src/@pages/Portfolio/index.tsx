@@ -249,7 +249,7 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
                 className="flex items-center justify-center">
-                <div className="lg:h-191 lg:w-360 md:w-3xl md:h-290 w-93.75 h-195 flex lg:flex-row md:flex-col flex-col items-center gap-16 md:pt-8  md:pb-8  md:pr-8  md:pl-8">
+                <div className="lg:h-191 lg:w-360 md:w-3xl md:h-290 w-89.25 h-195 flex lg:flex-row md:flex-col flex-col items-center gap-16 md:pt-8  md:pb-8  md:pr-8  md:pl-8 border border-black">
                     <div className="flex flex-col justify-center gap-8 w-full h-full">
                         <h3 className="lg:text-[37px] md:text-[37px] text-[21px] font-medium">
                             About
@@ -262,7 +262,7 @@ export default function Portfolio() {
                         </button>
                     </div>
 
-                    <div className="flex flex-col justify-center lg:w-164 lg:h-175 md:w-176 md:h-175 w-[357px] h-[315px]">
+                    <div className="flex flex-col justify-center lg:w-164 lg:h-175 md:w-176 md:h-175 w-89.25 h-78.75 border border-black">
                         <img src={AboutImage} alt="About" className="w-full h-full object-cover object-center rounded-lg" />
                     </div>
                 </div>
