@@ -15,36 +15,45 @@ import ServiceTwo from "../../assets/service-thumbnail-2.jpg";
 import AboutImage from "../../assets/about-img.jpg";
 import CTAImage from "../../assets/CTA-bg.jpg";
 import { motion } from "motion/react";
+import { useRef } from "react";
 
 export default function Portfolio() {
+    const projectRef = useRef<HTMLDivElement | null>(null);
+
+    const goToProjects = () => {
+        projectRef?.current?.scrollIntoView({ behavior: "smooth" })
+    }
     return (
         <>
             {/* Hero Section */}
 
             <div className="flex items-center justify-center">
-                <div className="lg:h-233 lg:w-344 flex items-center" >
-                    {/* Hero Text Section */}
+                {/* Hero Text Section */}
+                <div className="lg:h-233 lg:w-344 md:h-282.5 md:w-176 h-200 w-86 flex lg:flex-row md:flex-col flex-col lg:gap-0 md:gap-14 gap-15 items-center" >
+
+                    {/* Text Section */}
                     <motion.div
                         initial={{ opacity: 0, x: -100 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1, ease: "easeOut" }}
-                        className="h-full w-1/2 flex flex-col justify-center gap-10">
-                        <h3 className="lg:text-6xl">Fullstack Developer  <br />and Hardware Solutions</h3>
-                        <p className="lg:text-sm lg:gap-10">I build full-stack applications with a focus on performance, scalability and clean system design.</p>
+                        className="lg:h-full lg:w-1/2 md:h-56 md:w-176 w-85.75 h-75 flex flex-col justify-center gap-10">
+                        <h3 className="lg:text-6xl md:text-3xl text-4xl text-left">Full-stack  <br className="lg:hidden md:hidden block" />Developer  <br className="lg:block md:block hidden" />and Hardware Solutions</h3>
+                        <p className="text-sm text-left gap-10">I build full-stack applications with a focus on performance, scalability and clean system design.</p>
 
                         <div className="flex items-center justify-start">
-                            <button className="lg:text-base text-left bg-[#5D45FD] text-white flex items-center gap-3 rounded-md lg:w-[185.31px] lg:h-[54.31px] lg:lg:px-4 lg:py-6.5 cursor-pointer">
+                            <button onClick={goToProjects} className="lg:text-base md:text-sm text-sm text-left bg-[#5D45FD] text-white flex justify-center items-center gap-3 rounded-md lg:w-[185.31px] lg:h-[54.31px] md:w-[185.31px] md:h-13.75 w-[185.31px] h-[54.31px] lg:lg:px-4 lg:py-6.5 md:px-4 md:py-6.5 cursor-pointer">
                                 <span>View Projects</span>
                                 <img src={ArrowRightUp} alt="Arrow Up" className="w-8 h-8" />
                             </button>
                         </div>
                     </motion.div>
+
                     {/* Hero Image Section */}
                     <motion.div
                         initial={{ opacity: 0, x: 100 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1, ease: "easeOut" }}
-                        className="h-full w-1/2">
+                        className="lg:h-full lg:w-1/2 md:w-176 md:h-215 w-85.75 h-102.25">
                         <img src={HeroImage} alt="Image" className="w-full h-full object-contain object-center rounded-md" />
                     </motion.div>
                 </div>
@@ -56,15 +65,15 @@ export default function Portfolio() {
                     initial={{ opacity: 0, x: -100 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                    className="flex lg:flex-col justify-center lg:h-64 lg:w-344">
-                    <div className="flex justify-between items-center w-full lg:h-8.25 ">
+                    className="flex lg:flex-col justify-center lg:h-64 lg:w-344 md:h-[192.96px] md:w-176 w-93.75 h-38.25">
+                    <div className="flex lg:justify-between md:justify-between justify-evenly items-center w-full lg:h-8.25 ">
                         <h3 className="text-lg">Tech stacks i use</h3>
-                        <img src={ReactLogo} alt="React" className="lg:w-48.25 lg:h-6" />
-                        <img src={NodeJSLogo} alt="NodeJS" className="lg:w-48.25 lg:h-6" />
-                        <img src={DockerLogo} alt="Docker" className="lg:w-48.25 lg:h-6" />
-                        <img src={HTML5Logo} alt="HTML5" className="lg:w-48.25 lg:h-6" />
-                        <img src={CSSLogo} alt="HTML5" className="lg:w-48.25 lg:h-6" />
-                        <img src={TailwindCSSLogo} alt="TAILWINDCSS" className="lg:w-48.25 lg:h-6" />
+                        <img src={ReactLogo} alt="React" className="lg:w-48.25 lg:h-6 md:h-8.25 lg:block md:block block" />
+                        <img src={NodeJSLogo} alt="NodeJS" className="lg:w-48.25 lg:h-6 md:h-8.25 lg:block md:block hidden" />
+                        <img src={DockerLogo} alt="Docker" className="lg:w-48.25 lg:h-6 md:h-8.25 lg:block md:block  hidden" />
+                        <img src={HTML5Logo} alt="HTML5" className="lg:w-48.25 lg:h-6 md:h-8.25 lg:block md:hidden hidden" />
+                        <img src={CSSLogo} alt="HTML5" className="lg:w-48.25 lg:h-6 md:h-8.25 lg:block md:hidden hidden" />
+                        <img src={TailwindCSSLogo} alt="TAILWINDCSS" className="lg:w-48.25 md:h-8.25 lg:h-6 lg:block md:hidden hidden" />
                     </div>
                 </motion.div>
             </div>
@@ -75,36 +84,39 @@ export default function Portfolio() {
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
-                className="h-[1745.63px] flex flex-col gap-30.5">
+                className="lg:h-[1745.63px] md:h-800 h-550 lg:pl-8 lg:pr-8 lg:pt-28 lg:pb-28 md:pl-8 md:pr-8 md:pt-20 md:pb-20 pl-4 pr-4 pt-15 pb-15 flex flex-col lg:gap-30.5 md:gap-20 gap-15"
+                ref={projectRef}
+            >
                 <div className="lg:text-4xl flex items-center justify-center">
-                    <h3 className="lg:text-4xl">Recent Works</h3>
+                    <h3 className="lg:text-4xl md:text-[28px] text-[21px]">Recent Works</h3>
                 </div>
 
                 <div className="flex items-center justify-center">
-                    <div className="w-344 h-351 border-blue-500 grid lg:grid-cols-2 gap-y-6 gap-x-12">
+                    <div className="lg:w-344 lg:h-351 md:w-176 md:h-[2828.64px] w-86 h-500 grid lg:grid-cols-2 md:grid-cols-1 lg:gap-y-6 lg:gap-x-12 gap-8">
 
                         {/* Lhanlee Beauty Lounge Section */}
                         <motion.div
                             initial={{ opacity: 0, x: -100 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1, ease: "easeOut" }}
-                            className="lg:w-169 lg:h-175 flex lg:flex-col lg:gap-6 overflow-hidden">
-                            <img src={ProjectOne} alt="ProjectOne" className="lg:w-169 lg:h-117" />
-                            <div className="flex items-center lg:gap-2">
-                                <button className="lg:w-20 lg:h-7 lg:pr-3 lg:pl-3 lg:pt-2 lg:pb-2 bg-[#525050] lg:rounded-md lg:text-sm text-white">React JS</button>
-                                <button className="lg:w-20 lg:h-7 lg:pr-3 lg:pl-3 lg:pt-2 lg:pb-2 bg-[#525050] lg:rounded-md lg:text-sm text-white">Express JS</button>
-                                <button className="lg:w-20 lg:h-7 lg:pr-3 lg:pl-3 lg:pt-2 lg:pb-2 bg-[#525050] lg:rounded-md lg:text-sm text-white">Node JS</button>
-                                <button className="lg:w-10 lg:h-7 lg:pr-3 lg:pl-3 lg:pt-2 lg:pb-2 bg-[#525050] lg:rounded-md lg:text-sm text-white">+3</button>
+                            className="lg:w-169 lg:h-178 md:w-176 md:h-178 w-85.75 h-59.5 flex lg:flex-col md:flex-col flex-col lg:gap-6 md:gap-6 gap-6">
+                            <img src={ProjectOne} alt="ProjectOne" className="w-full h-full" />
+
+                            <div className="flex items-center gap-2">
+                                <button className="w-20 md:w-24 lg:h-9 h-10 pr-3 pl-3 pt-2 pb-2 bg-[#525050] rounded-md text-sm text-white">React JS</button>
+                                <button className="w-24 md:w-28 lg:h-9 h-10 pr-3 pl-3 pt-2 pb-2 bg-[#525050] rounded-md text-sm text-white">Express JS</button>
+                                <button className="w-20 md:w-24 lg:h-9 h-10 pr-3 pl-3 pt-2 pb-2 bg-[#525050] rounded-md text-sm text-white">Node JS</button>
+                                <button className="w-10 md:w-20 lg:h-9 h-10 pr-3 pl-3 pt-2 pb-2 bg-[#525050] rounded-md text-sm  text-white">+3</button>
                             </div>
 
-                            <h3 className="lg:text-[21px]">
+                            <h3 className="lg:text-[21px] md:text-[21px] text-base font-medium">
                                 Lhanlee Beauty Lounge
                             </h3>
-                            <p className="lg:text-sm">
+                            <p className="text-sm">
                                 Created a system that improves efficiency of reservations and appointments.
                             </p>
-                            <button className="lg:w-41 lg:h-14 bg-[#5D45FD] lg:pt-4 lg:pb-4 lg:pl-7 lg:pr-7 lg:text-sm rounded-md text-white flex items-center justify-between cursor-pointer">
-                                <span>Live Demo</span>
+                            <button className="lg:w-41 lg:h-14 md:w-[161.31px] md:h-13.75 w-[161.31px] h-13.75  bg-[#5D45FD] lg:pt-4 lg:pb-4 lg:pl-7 lg:pr-7 pl-6.5 pr-6.5 pt-4 pb-4 lg:text-sm rounded-md text-white flex items-center justify-center cursor-pointer">
+                                <span><p className="lg:text-sm md:text-xs text-xs">Live Demo</p></span>
                                 <img src={ArrowRightUp} alt="Arrow Up" className="w-7 h-7" />
                             </button>
                         </motion.div>
@@ -114,24 +126,24 @@ export default function Portfolio() {
                             initial={{ opacity: 0, x: 100 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1, ease: "easeOut" }}
-                            className="lg:w-169 lg:h-175 flex lg:flex-col lg:gap-6 ">
-                            <img src={ProjectTwo} alt="ProjectOne" className="lg:w-169 lg:h-117" />
-                            <div className="flex items-center lg:gap-2">
-                                <button className="lg:w-20 lg:h-7 lg:pr-3 lg:pl-3 lg:pt-2 lg:pb-2 bg-[#525050] lg:rounded-md lg:text-sm text-white">React JS</button>
-                                <button className="lg:w-20 lg:h-7 lg:pr-3 lg:pl-3 lg:pt-2 lg:pb-2 bg-[#525050] lg:rounded-md lg:text-sm text-white">Express JS</button>
-                                <button className="lg:w-20 lg:h-7 lg:pr-3 lg:pl-3 lg:pt-2 lg:pb-2 bg-[#525050] lg:rounded-md lg:text-sm text-white">Node JS</button>
-                                <button className="lg:w-10 lg:h-7 lg:pr-3 lg:pl-3 lg:pt-2 lg:pb-2 bg-[#525050] lg:rounded-md lg:text-sm text-white">+3</button>
+                            className="lg:w-169 lg:h-178 md:w-176 md:h-178 w-85.75 h-59.5 flex lg:flex-col md:flex-col flex-col lg:gap-6 md:gap-6 gap-6">
+                            <img src={ProjectTwo} alt="ProjectOne" className="w-full h-full" />
+                            <div className="flex items-center gap-2">
+                                <button className="w-20 md:w-24 lg:h-9 h-10 pr-3 pl-3 pt-2 pb-2 bg-[#525050] rounded-md text-sm text-white">React JS</button>
+                                <button className="w-24 md:w-28 lg:h-9 h-10 pr-3 pl-3 pt-2 pb-2 bg-[#525050] rounded-md text-sm text-white">Express JS</button>
+                                <button className="w-20 md:w-24 lg:h-9 h-10 pr-3 pl-3 pt-2 pb-2 bg-[#525050] rounded-md text-sm text-white">Node JS</button>
+                                <button className="w-10 md:w-20 lg:h-9 h-10 pr-3 pl-3 pt-2 pb-2 bg-[#525050] rounded-md text-sm  text-white">+3</button>
                             </div>
 
-                            <h3 className="lg:text-[21px]">
+                            <h3 className="lg:text-[21px] md:text-[21px] text-base font-medium">
                                 IT Ticketing Portal
                             </h3>
-                            <p className="lg:text-sm">
+                            <p className="text-sm">
                                 A web-based system for reporting, tracking, and resolving IT issues efficiently.
                             </p>
-                            <button className="lg:w-41 lg:h-14 bg-[#5D45FD] lg:pt-4 lg:pb-4 lg:pl-7 lg:pr-7 lg:text-sm rounded-md text-white flex items-center justify-between cursor-pointer">
-                                <span>Live Demo</span>
-                                <img src={ArrowRightUp} alt="Arrow Up" className="w-8 h-8" />
+                            <button className="lg:w-41 lg:h-14 md:w-[161.31px] md:h-13.75 w-[161.31px] h-13.75  bg-[#5D45FD] lg:pt-4 lg:pb-4 lg:pl-7 lg:pr-7 pl-6.5 pr-6.5 pt-4 pb-4 lg:text-sm rounded-md text-white flex items-center justify-center cursor-pointer">
+                                <span><p className="lg:text-sm md:text-xs text-xs">Live Demo</p></span>
+                                <img src={ArrowRightUp} alt="Arrow Up" className="w-7 h-7" />
                             </button>
                         </motion.div>
 
@@ -140,23 +152,23 @@ export default function Portfolio() {
                             initial={{ opacity: 0, x: -100 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1, ease: "easeOut" }}
-                            className="lg:w-169 lg:h-175 flex lg:flex-col lg:gap-6 ">
-                            <img src={ProjectThree} alt="ProjectOne" className="lg:w-169 lg:h-117" />
-                            <div className="flex items-center lg:gap-2">
-                                <button className="lg:w-20 lg:h-7 lg:pr-3 lg:pl-3 lg:pt-2 lg:pb-2 bg-[#525050] lg:rounded-md lg:text-sm text-white">React JS</button>
-                                <button className="lg:w-20 lg:h-7 lg:pr-3 lg:pl-3 lg:pt-2 lg:pb-2 bg-[#525050] lg:rounded-md lg:text-sm text-white">Express JS</button>
-                                <button className="lg:w-20 lg:h-7 lg:pr-3 lg:pl-3 lg:pt-2 lg:pb-2 bg-[#525050] lg:rounded-md lg:text-sm text-white">Node JS</button>
-                                <button className="lg:w-10 lg:h-7 lg:pr-3 lg:pl-3 lg:pt-2 lg:pb-2 bg-[#525050] lg:rounded-md lg:text-sm text-white">+3</button>
+                            className="lg:w-169 lg:h-178 md:w-176 md:h-178 w-85.75 h-59.5 flex lg:flex-col md:flex-col flex-col lg:gap-6 md:gap-6 gap-6">
+                            <img src={ProjectThree} alt="ProjectOne" className="w-full h-full" />
+                            <div className="flex items-center gap-2">
+                                <button className="w-20 md:w-24 lg:h-9 h-10 pr-3 pl-3 pt-2 pb-2 bg-[#525050] rounded-md text-sm text-white">React JS</button>
+                                <button className="w-24 md:w-28 lg:h-9 h-10 pr-3 pl-3 pt-2 pb-2 bg-[#525050] rounded-md text-sm text-white">Express JS</button>
+                                <button className="w-20 md:w-24 lg:h-9 h-10 pr-3 pl-3 pt-2 pb-2 bg-[#525050] rounded-md text-sm text-white">Node JS</button>
+                                <button className="w-10 md:w-20 lg:h-9 h-10 pr-3 pl-3 pt-2 pb-2 bg-[#525050] rounded-md text-sm  text-white">+3</button>
                             </div>
-                            <h3 className="lg:text-[21px]">
+                            <h3 className="lg:text-[21px] md:text-[21px] text-base font-medium">
                                 E-Com Web App
                             </h3>
-                            <p className="lg:text-sm">
+                            <p className="text-sm">
                                 A modern e-commerce with secure payments and streamlined order management.
                             </p>
-                            <button className="lg:w-41 lg:h-14 bg-[#5D45FD] lg:pt-4 lg:pb-4 lg:pl-7 lg:pr-7 lg:text-sm rounded-md text-white flex items-center justify-between cursor-pointer">
-                                <span>Live Demo</span>
-                                <img src={ArrowRightUp} alt="Arrow Up" className="w-8 h-8" />
+                            <button className="lg:w-41 lg:h-14 md:w-[161.31px] md:h-13.75 w-[161.31px] h-13.75  bg-[#5D45FD] lg:pt-4 lg:pb-4 lg:pl-7 lg:pr-7 pl-6.5 pr-6.5 pt-4 pb-4 lg:text-sm rounded-md text-white flex items-center justify-center cursor-pointer">
+                                <span><p className="lg:text-sm md:text-xs text-xs">Live Demo</p></span>
+                                <img src={ArrowRightUp} alt="Arrow Up" className="w-7 h-7" />
                             </button>
                         </motion.div>
 
@@ -165,52 +177,51 @@ export default function Portfolio() {
                             initial={{ opacity: 0, x: 100 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1, ease: "easeOut" }}
-                            className="lg:w-169 lg:h-175 flex lg:flex-col lg:gap-6 ">
-                            <img src={ProjectFour} alt="ProjectOne" className="lg:w-169 lg:h-117" />
-                            <div className="flex items-center lg:gap-2">
-                                <button className="lg:w-20 lg:h-7 lg:pr-3 lg:pl-3 lg:pt-2 lg:pb-2 bg-[#525050] lg:rounded-md lg:text-sm text-white">React JS</button>
-                                <button className="lg:w-20 lg:h-7 lg:pr-3 lg:pl-3 lg:pt-2 lg:pb-2 bg-[#525050] lg:rounded-md lg:text-sm text-white">Express JS</button>
-                                <button className="g:w-26.7 lg:h-7 lg:pr-3 lg:pl-3 lg:pt-2 lg:pb-2 bg-[#525050] lg:rounded-md lg:text-sm text-white">Tailwind CSS</button>
+                            className="lg:w-169 lg:h-178 md:w-176 md:h-178 w-85.75 h-59.5 flex lg:flex-col md:flex-col flex-col lg:gap-6 md:gap-6 gap-6">
+                            <img src={ProjectFour} alt="ProjectOne" className="w-full h-full" />
+                            <div className="flex items-center gap-2">
+                                <button className="w-20 md:w-24 lg:h-9 h-10 pr-3 pl-3 pt-2 pb-2 bg-[#525050] rounded-md text-sm text-white">React JS</button>
+                                <button className="w-32 md:w-24 lg:h-9 h-11 pr-3 pl-3 pt-2 pb-2 bg-[#525050] rounded-md text-sm text-white">Tailwind CSS</button>
                             </div>
-                            <h3 className="lg:text-[21px]">
+                            <h3 className="lg:text-[21px] md:text-[21px] text-base font-medium">
                                 Component Expert Solution Limited
                             </h3>
-                            <p className="lg:text-sm">
+                            <p className="text-sm">
                                 A modern website for electronics component warehousing & testing solutions
                             </p>
-                            <button className="lg:w-41 lg:h-14 bg-[#5D45FD] lg:pt-4 lg:pb-4 lg:pl-7 lg:pr-7 lg:text-sm rounded-md text-white flex items-center justify-between cursor-pointer">
-                                <span>Live Demo</span>
-                                <img src={ArrowRightUp} alt="Arrow Up" className="w-8 h-8" />
+                            <button className="lg:w-41 lg:h-14 md:w-[161.31px] md:h-13.75 w-[161.31px] h-13.75  bg-[#5D45FD] lg:pt-4 lg:pb-4 lg:pl-7 lg:pr-7 pl-6.5 pr-6.5 pt-4 pb-4 lg:text-sm rounded-md text-white flex items-center justify-center cursor-pointer">
+                                <span><p className="lg:text-sm md:text-xs text-xs">Live Demo</p></span>
+                                <img src={ArrowRightUp} alt="Arrow Up" className="w-7 h-7" />
                             </button>
                         </motion.div>
                     </div>
                 </div>
             </motion.div>
 
-            {/* Recent Works Section */}
+            {/* Services Section */}
             <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
                 className="flex items-center justify-center">
-                <div className="lg:h-261 lg:w-360">
+                <div className="lg:h-261 lg:w-360 md:w-3xl md:h-437 w-3xl h-436.75 border border-red-500">
 
-                    <div className="flex flex-col gap-8 text-center lg:mt-28 lg:mb-20 ">
-                        <h3 className="lg:text-4xl">Services</h3>
+                    <div className="flex flex-col gap-8 text-center lg:mt-28 md:mt-20 lg:mb-20 mt-20 mb-20">
+                        <h3 className="text-4xl">Services</h3>
                         <p className="text-[13px]">End-to-end development solutions tailored to your needs.</p>
                     </div>
 
-                    <div className="flex items-center justify-center">
-                        <div className="flex items-center gap-6">
+                    <div className="flex items-center justify-center md:mt-20">
+                        <div className="flex lg:flex-row md:flex-col flex-col items-center gap-6">
                             {/* Service One Section */}
                             <motion.div
                                 initial={{ opacity: 0, x: -100 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1.5, ease: "easeOut" }}
-                                className="flex items-center justify-center lg:w-169 lg:h-175 bg-[#EBEBEB]">
-                                <div>
-                                    <img src={ServiceOne} alt="Service" className="lg:w-153 lg:h-138" />
-                                    <h3 className="lg:text-[21px] lg:mt-10">Fullstack-Development</h3>
+                                className="flex items-center justify-center lg:w-169 lg:h-175 md:w-176 md:h-175.25 w-176 h-175.25 bg-[#EBEBEB]">
+                                <div className="lg:w-153 lg:h-138 md:w-160 md:h-144 w-176.5 h-113.75">
+                                    <img src={ServiceOne} alt="Service" className="w-full h-full" />
+                                    <h3 className="text-[21px] lg:mt-10 md:mt-5">Fullstack-Development</h3>
                                 </div>
 
 
@@ -221,10 +232,10 @@ export default function Portfolio() {
                                 initial={{ opacity: 0, x: 100 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1.5, ease: "easeOut" }}
-                                className="flex items-center justify-center lg:w-169 lg:h-175 bg-[#EBEBEB]">
-                                <div>
-                                    <img src={ServiceTwo} alt="Service" className="lg:w-153 lg:h-138" />
-                                    <h3 className="lg:text-[21px] lg:mt-10">Hardware & System Integration</h3>
+                                className="flex items-center justify-center lg:w-169 lg:h-175 md:w-176 md:h-175.25 w-176 h-175.25 bg-[#EBEBEB]">
+                                <div className="lg:w-153 lg:h-138 md:w-160 md:h-144 w-176.5 h-113.75">
+                                    <img src={ServiceTwo} alt="Service" className="w-full h-full" />
+                                    <h3 className="text-[21px] lg:mt-10 md:mt-5">Hardware & System Integration</h3>
                                 </div>
 
                             </motion.div>
@@ -240,20 +251,20 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
                 className="flex items-center justify-center">
-                <div className="lg:h-191 lg:w-360 flex items-center gap-16">
+                <div className="lg:h-191 lg:w-360 md:w-3xl md:h-290 flex lg:flex-row md:flex-col flex-col items-center gap-16 md:pt-8  md:pb-8  md:pr-8  md:pl-8">
                     <div className="flex flex-col justify-center gap-8 w-full h-full">
-                        <h3 className="lg:text-[37px] font-medium">
+                        <h3 className="text-[37px] font-medium">
                             About
                         </h3>
-                        <p className="lg:text-[17px]">I'm Renyel Jay Sioc, a full-stack developer experienced in building web applications using Node js, Express, React, Typescipt and Tailwind CSS.</p>
-                        <p className="lg:text-[17px]">I've worked on e-commerce platforms, IT ticketing systems, and reservation systems that focus on performance, usability and clean architecture. I enjoy solving technical problems and creating solutions that are reliable, scalable and easy to use.</p>
-                        <button className=" flex items-center justify-between lg:h-13.75 lg:w-55.75 rounded-md lg:pt-4 lg:pb-4 lg:pr-6.5 lg:pl-6.5 lg:text-xs bg-[#5D45FD]">
+                        <p className="text-[17px]">I'm Renyel Jay Sioc, a full-stack developer experienced in building web applications using Node js, Express, React, Typescipt and Tailwind CSS.</p>
+                        <p className="text-[17px]">I've worked on e-commerce platforms, IT ticketing systems, and reservation systems that focus on performance, usability and clean architecture. I enjoy solving technical problems and creating solutions that are reliable, scalable and easy to use.</p>
+                        <button className=" flex items-center justify-center lg:h-13.75 lg:w-55.75 md:h-13 md:w-55.75 rounded-md pt-4 pb-4 pr-6.5 l-6.5 text-xs bg-[#5D45FD]">
                             <span><p className="lg:text-sm text-white">Download Resume</p></span>
                             <img src={ArrowRightUp} alt="Arrow Up" className="w-8 h-8" />
                         </button>
                     </div>
-                    <div className="flex flex-col justify-center w-full h-full">
-                        <img src={AboutImage} alt="About" className="lg:w-164 lg:h-175 object-cover object-center rounded-lg " />
+                    <div className="flex flex-col justify-center lg:w-164 lg:h-175 md:w-176 md:h-175 w-full h-full">
+                        <img src={AboutImage} alt="About" className="w-full h-full object-cover object-center rounded-lg" />
                     </div>
                 </div>
             </motion.div>
@@ -264,20 +275,23 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
                 className="flex items-center justify-center">
-                <div className="flex flex-col justify-center lg:w-360 lg:h-181 lg:pl-8 lg:pr-8 lg:pt-28 lg:pb-28 relative">
-                    <img src={CTAImage} className="w-full h-full rounded-md object-cover object-center" />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center lg:gap-8">
-                        <h3 className="text-white lg:text-[28px] font-semibold">
-                            Let's Build Something Reliable Together.
-                        </h3>
-                        <p className="lg:text-sm text-white">Have a project in mind or need a developer who understands both software and hardware?</p>
-                        <button className="flex items-center bg-[#5D45FD] cursor-pointer rounded-md lg:pl-6.5 lg:pr-6.5 lg:pt-4 lg:pb-4">
-                            <span>
-                                <p className="lg:text-sm text-white">Get in Touch</p>
-                            </span>
-                            <img src={ArrowRightUp} alt="Arrow Up" className="w-8 h-8" />
-                        </button>
+                <div className="flex lg:flex-col md:flex-row justify-center lg:w-360 lg:h-181 md:w-3xl md:h-120 pl-8 pr-8 pt-28 pb-28 ">
+                    <div className="relative lg:w-344 lg:h-125 md:w-176 md:h-80">
+                        <img src={CTAImage} className="w-full h-full rounded-md object-cover object-center" />
+                        <div className="absolute inset-0 flex flex-col items-center justify-center gap-8">
+                            <h3 className="text-white text-[32px] text-center font-semibold">
+                                Let's Build Something <br className="lg:hidden md:block" /> Reliable Together.
+                            </h3>
+                            <p className="text-sm text-white text-center">Have a project in mind or need a developer who understands both <br className="lg:hidden md:block" /> software and hardware?</p>
+                            <button className="flex items-center bg-[#5D45FD] cursor-pointer rounded-md pl-6.5 pr-6.5 pt-4 pb-4">
+                                <span>
+                                    <p className="text-sm text-white">Get in Touch</p>
+                                </span>
+                                <img src={ArrowRightUp} alt="Arrow Up" className="w-8 h-8" />
+                            </button>
+                        </div>
                     </div>
+
                 </div>
             </motion.div>
 
