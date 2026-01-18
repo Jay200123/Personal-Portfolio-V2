@@ -115,7 +115,10 @@ export default function Portfolio() {
                             <p className="text-sm">
                                 Created a system that improves efficiency of reservations and appointments.
                             </p>
-                            <button className="lg:w-41 lg:h-14 md:w-[161.31px] md:h-13.75 w-[161.31px] h-13.75  bg-[#5D45FD] lg:pt-4 lg:pb-4 lg:pl-7 lg:pr-7 pl-6.5 pr-6.5 pt-4 pb-4 lg:text-sm rounded-md text-white flex items-center justify-center cursor-pointer">
+                            <button
+                                className="lg:w-41 lg:h-14 md:w-[161.31px] md:h-13.75 w-[161.31px] h-13.75  bg-[#5D45FD] lg:pt-4 lg:pb-4 lg:pl-7 lg:pr-7 pl-6.5 pr-6.5 pt-4 pb-4 lg:text-sm rounded-md text-white flex items-center justify-center cursor-pointer"
+                                onClick={() => window.open("https://www.lhanlee-salon.com/", "_blank", "noopener,noreferrer")}
+                            >
                                 <span><p className="lg:text-sm md:text-xs text-xs">Live Demo</p></span>
                                 <img src={ArrowRightUp} alt="Arrow Up" className="w-7 h-7" />
                             </button>
@@ -141,7 +144,11 @@ export default function Portfolio() {
                             <p className="text-sm">
                                 A web-based system for reporting, tracking, and resolving IT issues efficiently.
                             </p>
-                            <button className="lg:w-41 lg:h-14 md:w-[161.31px] md:h-13.75 w-[161.31px] h-13.75  bg-[#5D45FD] lg:pt-4 lg:pb-4 lg:pl-7 lg:pr-7 pl-6.5 pr-6.5 pt-4 pb-4 lg:text-sm rounded-md text-white flex items-center justify-center cursor-pointer">
+                            <button
+                                className="lg:w-41 lg:h-14 md:w-[161.31px] md:h-13.75 w-[161.31px] h-13.75  bg-[#5D45FD] lg:pt-4 lg:pb-4 lg:pl-7 lg:pr-7 pl-6.5 pr-6.5 pt-4 pb-4 lg:text-sm rounded-md text-white flex items-center justify-center cursor-pointer"
+                                onClick={() => window.open("https://ts-project-frontend-b8yv.vercel.app/", "_blank", "noopener,noreferrer")}
+
+                            >
                                 <span><p className="lg:text-sm md:text-xs text-xs">Live Demo</p></span>
                                 <img src={ArrowRightUp} alt="Arrow Up" className="w-7 h-7" />
                             </button>
@@ -166,7 +173,11 @@ export default function Portfolio() {
                             <p className="text-sm">
                                 A modern e-commerce with secure payments and streamlined order management.
                             </p>
-                            <button className="lg:w-41 lg:h-14 md:w-[161.31px] md:h-13.75 w-[161.31px] h-13.75  bg-[#5D45FD] lg:pt-4 lg:pb-4 lg:pl-7 lg:pr-7 pl-6.5 pr-6.5 pt-4 pb-4 lg:text-sm rounded-md text-white flex items-center justify-center cursor-pointer">
+                            <button
+                                className="lg:w-41 lg:h-14 md:w-[161.31px] md:h-13.75 w-[161.31px] h-13.75  bg-[#5D45FD] lg:pt-4 lg:pb-4 lg:pl-7 lg:pr-7 pl-6.5 pr-6.5 pt-4 pb-4 lg:text-sm rounded-md text-white flex items-center justify-center cursor-pointer"
+                                onClick={() => window.open(" https://e-com-redux-toolkit.vercel.app/", "_blank", "noopener,noreferrer")}
+
+                            >
                                 <span><p className="lg:text-sm md:text-xs text-xs">Live Demo</p></span>
                                 <img src={ArrowRightUp} alt="Arrow Up" className="w-7 h-7" />
                             </button>
@@ -189,7 +200,11 @@ export default function Portfolio() {
                             <p className="text-sm">
                                 A modern website for electronics component warehousing & testing solutions
                             </p>
-                            <button className="lg:w-41 lg:h-14 md:w-[161.31px] md:h-13.75 w-[161.31px] h-13.75  bg-[#5D45FD] lg:pt-4 lg:pb-4 lg:pl-7 lg:pr-7 pl-6.5 pr-6.5 pt-4 pb-4 lg:text-sm rounded-md text-white flex items-center justify-center cursor-pointer">
+                            <button
+                                className="lg:w-41 lg:h-14 md:w-[161.31px] md:h-13.75 w-[161.31px] h-13.75  bg-[#5D45FD] lg:pt-4 lg:pb-4 lg:pl-7 lg:pr-7 pl-6.5 pr-6.5 pt-4 pb-4 lg:text-sm rounded-md text-white flex items-center justify-center cursor-pointer"
+                                onClick={() => window.open("https://component-expert-solutions-limited-web.vercel.app/", "_blank", "noopener,noreferrer")}
+
+                            >
                                 <span><p className="lg:text-sm md:text-xs text-xs">Live Demo</p></span>
                                 <img src={ArrowRightUp} alt="Arrow Up" className="w-7 h-7" />
                             </button>
@@ -208,7 +223,7 @@ export default function Portfolio() {
 
                     <div className="flex flex-col gap-8 text-center lg:mt-28 md:mt-20 lg:mb-20 mt-20 mb-20">
                         <h3 className="md:text-4xl lg:text-4xl text-[21px]">Services</h3>
-                        <p className="text-[13px]">End-to-end development <br className="lg:hidden md:hidden block"/>solutions tailored to your needs.</p>
+                        <p className="text-[13px]">End-to-end development <br className="lg:hidden md:hidden block" />solutions tailored to your needs.</p>
                     </div>
 
                     <div className="flex items-center justify-center md:mt-20">
@@ -249,7 +264,7 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
                 className="flex items-center justify-center">
-                <div className="lg:h-191 lg:w-360 md:w-3xl md:h-290 w-89.25 h-195 flex lg:flex-row md:flex-col flex-col items-center gap-16 md:pt-8  md:pb-8  md:pr-8  md:pl-8 border border-black">
+                <div className="lg:h-191 lg:w-360 md:w-3xl md:h-290 w-89.25 h-195 flex lg:flex-row md:flex-col flex-col items-center gap-16 pt-8  md:pb-8  md:pr-8  md:pl-8">
                     <div className="flex flex-col justify-center gap-8 w-full h-full">
                         <h3 className="lg:text-[37px] md:text-[37px] text-[21px] font-medium">
                             About
@@ -262,7 +277,7 @@ export default function Portfolio() {
                         </button>
                     </div>
 
-                    <div className="flex flex-col justify-center lg:w-164 lg:h-175 md:w-176 md:h-175 w-89.25 h-78.75 border border-black">
+                    <div className="flex flex-col justify-center lg:w-164 lg:h-175 md:w-176 md:h-175 w-89.25 h-78.75 ">
                         <img src={AboutImage} alt="About" className="w-full h-full object-cover object-center rounded-lg" />
                     </div>
                 </div>
@@ -274,14 +289,14 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
                 className="flex items-center justify-center">
-                <div className="flex lg:flex-col md:flex-row justify-center lg:w-360 lg:h-181 md:w-3xl md:h-120 w-[375px] h-[375.31px] pl-8 pr-8 pt-28 pb-28 ">
-                    <div className="relative lg:w-344 lg:h-125 md:w-176 md:h-80">
+                <div className="flex lg:flex-col md:flex-row justify-center lg:w-360 lg:h-181 md:w-3xl md:h-120 w-93.75 h-[375.31px] md:pl-8 md:pr-8 pt-28 pb-28 ">
+                    <div className="relative lg:w-344 lg:h-125 md:w-176 md:h-80 w-85.75 h-64">
                         <img src={CTAImage} className="w-full h-full rounded-md object-cover object-center" />
                         <div className="absolute inset-0 flex flex-col items-center justify-center gap-8">
-                            <h3 className="text-white text-[32px] text-center font-semibold">
+                            <h3 className="text-white lg:text-[32px] md:text-[32px] text-base text-center font-semibold">
                                 Let's Build Something <br className="lg:hidden md:block" /> Reliable Together.
                             </h3>
-                            <p className="text-sm text-white text-center">Have a project in mind or need a developer who understands both <br className="lg:hidden md:block" /> software and hardware?</p>
+                            <p className="text-sm text-white text-center">Have a project in mind or need a developer who understands both <br className="lg:hidden md:block hidden" /> software and hardware?</p>
                             <button className="flex items-center bg-[#5D45FD] cursor-pointer rounded-md pl-6.5 pr-6.5 pt-4 pb-4">
                                 <span>
                                     <p className="text-sm text-white">Get in Touch</p>
