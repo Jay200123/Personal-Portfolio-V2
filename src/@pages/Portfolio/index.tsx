@@ -219,7 +219,7 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
                 className="flex items-center justify-center">
-                <div className="lg:h-261 lg:w-360 md:w-3xl md:h-437 w-86.25 h-270 sm:pt-20 sm:pb-20 sm:pl-4 sm:pr-4">
+                <div className="lg:h-266 lg:w-360 md:w-3xl md:h-437 w-86.25 h-270 sm:pt-20 sm:pb-20 sm:pl-4 sm:pr-4">
 
                     <div className="flex flex-col gap-8 text-center lg:mt-28 md:mt-20 lg:mb-20 mt-20 mb-20">
                         <h3 className="md:text-4xl lg:text-4xl text-[21px]">Services</h3>
@@ -271,7 +271,7 @@ export default function Portfolio() {
                         </h3>
                         <p className="lg:text-[17px] md:text-[17px] text-base">I'm Renyel Jay Sioc, a full-stack developer experienced in building web applications using Node js, Express, React, Typescipt and Tailwind CSS.</p>
                         <p className="lg:text-[17px] md:text-[17px] text-base">I've worked on e-commerce platforms, IT ticketing systems, and reservation systems that focus on performance, usability and clean architecture. I enjoy solving technical problems and creating solutions that are reliable, scalable and easy to use.</p>
-                        <button className=" flex items-center justify-center lg:h-13.75 lg:w-55.75 md:h-13 md:w-55.75 w-[222.31px] h-[54.31px] rounded-md pt-4 pb-4 pr-6.5 l-6.5 text-xs bg-[#5D45FD]">
+                        <button className=" flex items-center justify-center lg:h-13.75 lg:w-55.75 md:h-13 md:w-55.75 w-[222.31px] h-[54.31px] rounded-md pt-4 pb-4 pr-6.5 pl-6.5 text-xs bg-[#5D45FD]">
                             <span><p className="lg:text-sm text-white">Download Resume</p></span>
                             <img src={ArrowRightUp} alt="Arrow Up" className="w-8 h-8" />
                         </button>
