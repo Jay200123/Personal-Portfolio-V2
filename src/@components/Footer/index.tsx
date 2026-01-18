@@ -8,7 +8,7 @@ export default function Footer() {
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
-                className="w-full lg:h-38 flex items-center justify-between lg:pt-10.75 lg:pl-8 lg:pr-8 lg:pb-11 bg-none">
+                className="w-full lg:h-38 md:h-58 flex lg:flex-row md:flex-col flex-col items-center justify-between pt-10.75 pl-8 pr-8 pb-11 bg-none">
                 <div>
                     <img src={NavLogo} alt="Image" className="w-28 h-9.75 object-center" />
                 </div>
@@ -18,27 +18,27 @@ export default function Footer() {
                         <motion.li
                             whileHover={{ scale: 1.2 }}
                             whileTap={{ scale: 0.95 }}
-                            className="lg:text-base lg:mr-12 cursor-pointer transition-all ease-in-out duration-300 hover:text-[#5D45FD]">
+                            className="lg:text-base md:text-sm lg:mr-12 cursor-pointer transition-all ease-in-out duration-300 hover:text-[#5D45FD]">
                             About
                         </motion.li>
                         <motion.li
                             whileHover={{ scale: 1.2 }}
                             whileTap={{ scale: 0.95 }}
-                            className="lg:text-base lg:mr-12 cursor-pointer  transition-all ease-in-out duration-300 hover:text-[#5D45FD]">
+                            className="lg:text-base md:text-sm lg:mr-12 cursor-pointer  transition-all ease-in-out duration-300 hover:text-[#5D45FD]">
                             Works
                         </motion.li>
                         <motion.li
                             whileHover={{ scale: 1.2 }}
                             whileTap={{ scale: 0.95 }}
-                            className="lg:text-base lg:mr-12 cursor-pointer transition-all ease-in-out duration-300 hover:text-[#5D45FD] ">Services</motion.li>
+                            className="lg:text-base md:text-sm lg:mr-12 cursor-pointer transition-all ease-in-out duration-300 hover:text-[#5D45FD] ">Services</motion.li>
                         <motion.li
                             whileHover={{ scale: 1.2 }}
                             whileTap={{ scale: 0.95 }}
-                            className="lg:text-base lg:mr-12 cursor-pointer transition-all ease-in-out duration-300 hover:text-[#5D45FD] ">Contact</motion.li>
+                            className="lg:text-base md:text-sm lg:mr-12 cursor-pointer transition-all ease-in-out duration-300 hover:text-[#5D45FD] ">Contact</motion.li>
                     </ul>
                 </div>
 
-                <div className="lg:w-116.5 lg:h-9 flex items-center justify-end lg:gap-2.5">
+                <div className="lg:w-116.5 lg:h-9 flex items-center justify-end gap-2.5">
 
                     <motion.button
                         whileHover={{ scale: 1.2 }}
