@@ -1,8 +1,12 @@
 import ArrowUpRight from "../../assets/right-up.png";
 import NavLogo from "../../assets/logo.svg";
 import { motion } from "motion/react";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+
+    const navigate = useNavigate();
+
     return (
         <>
             <motion.nav
@@ -11,7 +15,11 @@ export default function Navbar() {
                 transition={{ duration: 1, ease: "easeOut" }}
                 className="w-full lg:h-38 md:h-35 h-33 flex items-center justify-between lg:pt-10.75 lg:pl-8 lg:pr-8 lg:pb-11 md:pt-20 md:pb-20 md:pl-8 md:pr-8 pl-4 pr-4 pt-15 bg-none">
                 <div>
-                    <img src={NavLogo} alt="Image" className="w-28 h-9.75 object-center" />
+                    <img
+                        src={NavLogo}
+                        alt="Image"
+                        className="w-28 h-9.75 object-center cursor-pointer"
+                    />
                 </div>
 
                 <div className="lg:block md:hidden hidden">
@@ -19,19 +27,27 @@ export default function Navbar() {
                         <motion.li
                             whileHover={{ scale: 1.2 }}
                             whileTap={{ scale: 0.95 }}
-                            className="lg:text-base md:text-sm lg:mr-12 cursor-pointer transition-all ease-in-out duration-300 hover:text-[#5D45FD]">
+                            className="lg:text-base md:text-sm lg:mr-12 cursor-pointer transition-all ease-in-out duration-300 hover:text-[#5D45FD]"
+                            onClick={() => navigate("/#about")}
+                        >
                             About
                         </motion.li>
                         <motion.li
                             whileHover={{ scale: 1.2 }}
                             whileTap={{ scale: 0.95 }}
-                            className="lg:text-base md:text-sm lg:mr-12 cursor-pointer  transition-all ease-in-out duration-300 hover:text-[#5D45FD]">
+                            className="lg:text-base md:text-sm lg:mr-12 cursor-pointer  transition-all ease-in-out duration-300 hover:text-[#5D45FD]"
+                            onClick={() => navigate("/#works")}
+                        >
                             Works
                         </motion.li>
                         <motion.li
                             whileHover={{ scale: 1.2 }}
                             whileTap={{ scale: 0.95 }}
-                            className="lg:text-base md:text-sm lg:mr-12 cursor-pointer transition-all ease-in-out duration-300 hover:text-[#5D45FD] ">Services</motion.li>
+                            className="lg:text-base md:text-sm lg:mr-12 cursor-pointer transition-all ease-in-out duration-300 hover:text-[#5D45FD]"
+                            onClick={()=> navigate("/#services")}
+                            >
+                                Services
+                        </motion.li>
                         <motion.li
                             whileHover={{ scale: 1.2 }}
                             whileTap={{ scale: 0.95 }}
