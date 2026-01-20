@@ -1,4 +1,8 @@
-import { Navbar, Footer } from "../../@components";
+import {
+    Navbar,
+    Footer,
+    ScrollHash
+} from "../../@components";
 import { Outlet } from "react-router-dom";
 
 export default function MainLayout() {
@@ -6,6 +10,7 @@ export default function MainLayout() {
         <main className="min-h-screen w-full flex flex-col overflow-hidden">
             <Navbar />
             <div>
+                <ScrollHash />
                 <Outlet />
             </div>
             <Footer />
