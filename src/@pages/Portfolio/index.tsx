@@ -68,12 +68,37 @@ export default function Portfolio() {
                     className="flex lg:flex-col justify-center lg:h-64 lg:w-344 md:h-[192.96px] md:w-176 w-93.75 h-38.25">
                     <div className="flex lg:justify-between md:justify-between justify-evenly items-center w-full lg:h-8.25 ">
                         <h3 className="text-lg">Tech stacks i use</h3>
-                        <img src={ReactLogo} alt="React" className="lg:w-48.25 lg:h-6 md:h-8.25 lg:block md:block block" />
-                        <img src={NodeJSLogo} alt="NodeJS" className="lg:w-48.25 lg:h-6 md:h-8.25 lg:block md:block hidden" />
-                        <img src={DockerLogo} alt="Docker" className="lg:w-48.25 lg:h-6 md:h-8.25 lg:block md:block  hidden" />
-                        <img src={HTML5Logo} alt="HTML5" className="lg:w-48.25 lg:h-6 md:h-8.25 lg:block md:hidden hidden" />
-                        <img src={CSSLogo} alt="HTML5" className="lg:w-48.25 lg:h-6 md:h-8.25 lg:block md:hidden hidden" />
-                        <img src={TailwindCSSLogo} alt="TAILWINDCSS" className="lg:w-48.25 md:h-8.25 lg:h-6 lg:block md:hidden hidden" />
+                        <img src={ReactLogo}
+                            alt="React"
+                            className="lg:w-48.25 lg:h-6 md:h-8.25 cursor-pointer lg:block md:block block"
+                            onClick={() => window.open("http://react.dev/", "_blank", "noopener,noreferrer")} />
+                        <img src={NodeJSLogo}
+                            alt="NodeJS"
+                            className="lg:w-48.25 lg:h-6 md:h-8.25 cursor-pointer lg:block md:block hidden"
+                            onClick={() => window.open("https://nodejs.org/en", "_blank", "noopener,noreferrer")}
+                        />
+                        <img src={DockerLogo}
+                            alt="Docker"
+                            className="lg:w-48.25 lg:h-6 md:h-8.25 cursor-pointer lg:block md:block hidden"
+                            onClick={() => window.open("https://www.docker.com/", "_blank", "noopener,noreferrer")}
+                        />
+                        <img src={HTML5Logo}
+                            alt="HTML5"
+                            className="lg:w-48.25 lg:h-6 md:h-8.25 cursor-pointer lg:block md:hidden hidden"
+                            onClick={() => window.open("https://www.investopedia.com/terms/h/html.asp", "_blank", "noopener,noreferrer")}
+
+                        />
+                        <img src={CSSLogo}
+                            alt="HTML5"
+                            className="lg:w-48.25 lg:h-6 md:h-8.25 cursor-pointer lg:block md:hidden hidden"
+                            onClick={() => window.open("https://www.hostinger.com/ph/tutorials/what-is-css", "_blank", "noopener,noreferrer")}
+                        />
+                        <img src={TailwindCSSLogo}
+                            alt="TAILWINDCSS"
+                            className="lg:w-48.25 md:h-8.25 lg:h-6 cursor-pointer lg:block md:hidden hidden"
+                            onClick={() => window.open("https://tailwindcss.com/", "_blank", "noopener,noreferrer")}
+
+                        />
                     </div>
                 </motion.div>
             </div>
@@ -81,6 +106,7 @@ export default function Portfolio() {
 
             {/* Recent Works Section  */}
             <motion.div
+                id="works"
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
@@ -191,8 +217,8 @@ export default function Portfolio() {
                             className="lg:w-169 lg:h-178 md:w-176 md:h-178 w-85.75 h-59.5 flex lg:flex-col md:flex-col flex-col lg:gap-6 md:gap-6 gap-6">
                             <img src={ProjectFour} alt="ProjectOne" className="w-full h-full" />
                             <div className="flex items-center gap-2">
-                                <button className="w-20 md:w-24 lg:h-9 h-10 pr-3 pl-3 pt-2 pb-2 bg-[#525050] rounded-md text-sm text-white">React JS</button>
-                                <button className="w-32 md:w-24 lg:h-9 h-11 pr-3 pl-3 pt-2 pb-2 bg-[#525050] rounded-md text-sm text-white">Tailwind CSS</button>
+                                <button className="lg:w-20 md:w-24 lg:h-9 h-10 pr-3 pl-3 pt-2 pb-2 bg-[#525050] rounded-md text-sm text-white">React JS</button>
+                                <button className="lg:w-32 md:w-24 lg:h-9 h-11 pr-3 pl-3 pt-2 pb-2 bg-[#525050] rounded-md text-sm text-white">Tailwind CSS</button>
                             </div>
                             <h3 className="lg:text-[21px] md:text-[21px] text-base font-medium">
                                 Component Expert Solution Limited
@@ -215,6 +241,7 @@ export default function Portfolio() {
 
             {/* Services Section */}
             <motion.div
+                id="services"
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
@@ -260,6 +287,7 @@ export default function Portfolio() {
 
             {/* About Section */}
             <motion.div
+                id="about"
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
