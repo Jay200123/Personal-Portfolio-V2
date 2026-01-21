@@ -1,7 +1,10 @@
 import NavLogo from "../../assets/logo.svg";
 import { motion } from "motion/react";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
+    const navigate = useNavigate();
+
     return (
         <>
             <motion.footer
@@ -18,23 +21,31 @@ export default function Footer() {
                         <motion.li
                             whileHover={{ scale: 1.2 }}
                             whileTap={{ scale: 0.95 }}
-                            className="lg:text-base md:text-sm lg:mr-12 cursor-pointer transition-all ease-in-out duration-300 hover:text-[#5D45FD]">
+                            className="lg:text-base md:text-sm lg:mr-12 cursor-pointer transition-all ease-in-out duration-300 hover:text-[#5D45FD]"
+                            onClick={() => navigate("/#about")}
+                        >
                             About
                         </motion.li>
                         <motion.li
                             whileHover={{ scale: 1.2 }}
                             whileTap={{ scale: 0.95 }}
-                            className="lg:text-base md:text-sm lg:mr-12 cursor-pointer  transition-all ease-in-out duration-300 hover:text-[#5D45FD]">
+                            className="lg:text-base md:text-sm lg:mr-12 cursor-pointer  transition-all ease-in-out duration-300 hover:text-[#5D45FD]"
+                            onClick={() => navigate("/#works")}
+                        >
                             Works
                         </motion.li>
                         <motion.li
                             whileHover={{ scale: 1.2 }}
                             whileTap={{ scale: 0.95 }}
-                            className="lg:text-base md:text-sm lg:mr-12 cursor-pointer transition-all ease-in-out duration-300 hover:text-[#5D45FD] ">Services</motion.li>
+                            className="lg:text-base md:text-sm lg:mr-12 cursor-pointer transition-all ease-in-out duration-300 hover:text-[#5D45FD]"
+                            onClick={() => navigate("/#services")}
+                        >Services</motion.li>
                         <motion.li
                             whileHover={{ scale: 1.2 }}
                             whileTap={{ scale: 0.95 }}
-                            className="lg:text-base md:text-sm lg:mr-12 cursor-pointer transition-all ease-in-out duration-300 hover:text-[#5D45FD] ">Contact</motion.li>
+                            className="lg:text-base md:text-sm lg:mr-12 cursor-pointer transition-all ease-in-out duration-300 hover:text-[#5D45FD] ">
+                                Contact
+                            </motion.li>
                     </ul>
                 </div>
 
