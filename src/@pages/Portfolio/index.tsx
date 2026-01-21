@@ -302,7 +302,7 @@ export default function Portfolio() {
                         <button className=" flex items-center justify-center lg:h-13.75 lg:w-55.75 md:h-13 md:w-55.75 w-[222.31px] h-[54.31px] rounded-md pt-4 pb-4 pr-6.5 pl-6.5 text-xs bg-[#5D45FD]">
                             <span>
                                 <a
-                                    href="/public/SIOC_RESUME_RENYEL_JAY.pdf"
+                                    href="/SIOC_RESUME_RENYEL_JAY.pdf"
                                     download
                                     className="lg:text-sm text-white">Download Resume
                                 </a>
