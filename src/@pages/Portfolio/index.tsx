@@ -300,7 +300,13 @@ export default function Portfolio() {
                         <p className="lg:text-[17px] md:text-[17px] text-base">I'm Renyel Jay Sioc, a full-stack developer experienced in building web applications using Node js, Express, React, Typescipt and Tailwind CSS.</p>
                         <p className="lg:text-[17px] md:text-[17px] text-base">I've worked on e-commerce platforms, IT ticketing systems, and reservation systems that focus on performance, usability and clean architecture. I enjoy solving technical problems and creating solutions that are reliable, scalable and easy to use.</p>
                         <button className=" flex items-center justify-center lg:h-13.75 lg:w-55.75 md:h-13 md:w-55.75 w-[222.31px] h-[54.31px] rounded-md pt-4 pb-4 pr-6.5 pl-6.5 text-xs bg-[#5D45FD]">
-                            <span><p className="lg:text-sm text-white">Download Resume</p></span>
+                            <span>
+                                <a
+                                    href="../../../public/SIOC_RESUME_RENYEL_JAY.pdf"
+                                    download
+                                    className="lg:text-sm text-white">Download Resume
+                                </a>
+                            </span>
                             <img src={ArrowRightUp} alt="Arrow Up" className="w-8 h-8" />
                         </button>
                     </div>
