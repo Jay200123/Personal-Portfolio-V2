@@ -336,7 +336,6 @@ export default function Portfolio() {
 
                 </div>
             </motion.div>
-
         </>
     )
 }
