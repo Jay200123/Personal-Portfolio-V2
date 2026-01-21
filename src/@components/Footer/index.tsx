@@ -16,8 +16,8 @@ export default function Footer() {
                     <img src={NavLogo} alt="Image" className="w-28 h-9.75 object-center" />
                 </div>
 
-                <div>
-                    <ul className="flex items-center gap-14">
+                <div className="lg:w-95">
+                    <ul className="w-full flex items-center gap-14">
                         <motion.li
                             whileHover={{ scale: 1.2 }}
                             whileTap={{ scale: 0.95 }}
