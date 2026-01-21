@@ -44,21 +44,32 @@ export default function Footer() {
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.95 }}
                         className="w-9 h-9 py-4 px-4 flex items-center justify-center bg-[#5D45FD] rounded-md cursor-pointer">
-                        <i className="fa-brands fa-facebook text-white"></i>
+                        <i
+                            className="fa-brands fa-facebook text-white"
+                            onClick={() => window.open("https://www.facebook.com/renyeljay.sioc", "_blank", "noopener,noreferrer")}
+
+                        ></i>
                     </motion.button>
 
                     <motion.button
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.95 }}
                         className="w-9 h-9 py-4 px-4 flex items-center justify-center bg-[#5D45FD] rounded-md cursor-pointer">
-                        <i className="fa-brands fa-linkedin  text-white"></i>
+                        <i
+                            className="fa-brands fa-linkedin  text-white"
+                            onClick={() => window.open("https://www.linkedin.com/in/renyel-jay-sioc-25948034b/", "_blank", "noopener,noreferrer")}
+
+                        ></i>
                     </motion.button>
 
                     <motion.button
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.95 }}
                         className="w-9 h-9 py-4 px-4 flex items-center justify-center bg-[#5D45FD] rounded-md cursor-pointer">
-                        <i className="fa-brands fa-github  text-white"></i>
+                        <i
+                            className="fa-brands fa-github  text-white"
+                            onClick={() => window.open("https://github.com/Jay200123", "_blank", "noopener,noreferrer")}
+                        ></i>
                     </motion.button>
                 </div>
             </motion.footer>
