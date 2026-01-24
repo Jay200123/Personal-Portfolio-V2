@@ -60,48 +60,81 @@ export default function Portfolio() {
             </div>
 
             {/*TechStack Section */}
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center overflow-hidden">
                 <motion.div
                     initial={{ opacity: 0, x: -100 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                    className="flex lg:flex-col justify-center lg:h-64 lg:w-344 md:h-[192.96px] md:w-176 w-93.75 h-38.25">
-                    <div className="flex lg:justify-between md:justify-between justify-evenly items-center w-full lg:h-8.25 ">
-                        <h3 className="text-lg">Tech stacks i use</h3>
-                        <img src={ReactLogo}
-                            alt="React"
-                            className="lg:w-48.25 lg:h-6 md:h-8.25 cursor-pointer lg:block md:block block"
-                            onClick={() => window.open("http://react.dev/", "_blank", "noopener,noreferrer")} />
-                        <img src={NodeJSLogo}
-                            alt="NodeJS"
-                            className="lg:w-48.25 lg:h-6 md:h-8.25 cursor-pointer lg:block md:block hidden"
-                            onClick={() => window.open("https://nodejs.org/en", "_blank", "noopener,noreferrer")}
-                        />
-                        <img src={DockerLogo}
-                            alt="Docker"
-                            className="lg:w-48.25 lg:h-6 md:h-8.25 cursor-pointer lg:block md:block hidden"
-                            onClick={() => window.open("https://www.docker.com/", "_blank", "noopener,noreferrer")}
-                        />
-                        <img src={HTML5Logo}
-                            alt="HTML5"
-                            className="lg:w-48.25 lg:h-6 md:h-8.25 cursor-pointer lg:block md:hidden hidden"
-                            onClick={() => window.open("https://www.investopedia.com/terms/h/html.asp", "_blank", "noopener,noreferrer")}
+                    className="flex lg:flex-col justify-center lg:h-64 lg:w-344 md:h-[192.96px] md:w-176 w-93.75 h-38.25"
+                >
+                    <h3 className="text-lg mb-4 text-center">Tech stacks I use</h3>
 
-                        />
-                        <img src={CSSLogo}
-                            alt="HTML5"
-                            className="lg:w-48.25 lg:h-6 md:h-8.25 cursor-pointer lg:block md:hidden hidden"
-                            onClick={() => window.open("https://www.hostinger.com/ph/tutorials/what-is-css", "_blank", "noopener,noreferrer")}
-                        />
-                        <img src={TailwindCSSLogo}
-                            alt="TAILWINDCSS"
-                            className="lg:w-48.25 md:h-8.25 lg:h-6 cursor-pointer lg:block md:hidden hidden"
-                            onClick={() => window.open("https://tailwindcss.com/", "_blank", "noopener,noreferrer")}
+                    {/* MARQUEE CONTAINER */}
+                    <div className="w-full overflow-hidden">
+                        <motion.div
+                            className="flex items-center gap-10 w-max"
+                            animate={{ x: ["0%", "-50%"] }}
+                            transition={{
+                                repeat: Infinity,
+                                duration: 20,
+                                ease: "linear",
+                            }}
+                        >
+                            {/* FIRST SET */}
+                            <img
+                                src={ReactLogo}
+                                alt="React"
+                                className="lg:h-6 md:h-8 h-6 cursor-pointer"
+                                onClick={() => window.open("https://react.dev/", "_blank", "noopener,noreferrer")}
+                            />
 
-                        />
+                            <img
+                                src={NodeJSLogo}
+                                alt="NodeJS"
+                                className="lg:h-6 md:h-8 h-6 cursor-pointer"
+                                onClick={() => window.open("https://nodejs.org/en", "_blank", "noopener,noreferrer")}
+                            />
+
+                            <img
+                                src={DockerLogo}
+                                alt="Docker"
+                                className="lg:h-6 md:h-8 h-6 cursor-pointer"
+                                onClick={() => window.open("https://www.docker.com/", "_blank", "noopener,noreferrer")}
+                            />
+
+                            <img
+                                src={HTML5Logo}
+                                alt="HTML5"
+                                className="lg:h-6 md:h-8 h-6 cursor-pointer"
+                                onClick={() => window.open("https://www.investopedia.com/terms/h/html.asp", "_blank", "noopener,noreferrer")}
+                            />
+
+                            <img
+                                src={CSSLogo}
+                                alt="CSS"
+                                className="lg:h-6 md:h-8 h-6 cursor-pointer"
+                                onClick={() => window.open("https://www.hostinger.com/ph/tutorials/what-is-css", "_blank", "noopener,noreferrer")}
+                            />
+
+                            <img
+                                src={TailwindCSSLogo}
+                                alt="TailwindCSS"
+                                className="lg:h-6 md:h-8 h-6 cursor-pointer"
+                                onClick={() => window.open("https://tailwindcss.com/", "_blank", "noopener,noreferrer")}
+                            />
+
+                            {/* DUPLICATE SET FOR LOOP */}
+                            <img src={ReactLogo} className="lg:h-6 md:h-8 h-6" />
+                            <img src={NodeJSLogo} className="lg:h-6 md:h-8 h-6" />
+                            <img src={DockerLogo} className="lg:h-6 md:h-8 h-6" />
+                            <img src={HTML5Logo} className="lg:h-6 md:h-8 h-6" />
+                            <img src={CSSLogo} className="lg:h-6 md:h-8 h-6" />
+                            <img src={TailwindCSSLogo} className="lg:h-6 md:h-8 h-6" />
+                        </motion.div>
                     </div>
                 </motion.div>
             </div>
+
 
 
             {/* Recent Works Section  */}
